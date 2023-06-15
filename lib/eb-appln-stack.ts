@@ -27,6 +27,9 @@ export class EBApplnStack extends cdk.Stack {
       applicationName: appName
     })
 
+    console.log('webAppZipArchive.s3BucketName', webAppZipArchive.s3BucketName)
+    console.log('webAppZipArchive.s3ObjectKey', webAppZipArchive.s3ObjectKey)
+
     // Create an app version from the S3 asset defined earlier
     const appVersionProps = new elasticbeanstalk.CfnApplicationVersion(
       this,
